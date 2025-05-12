@@ -2,7 +2,7 @@ import React from 'react'
 
 function Haqqinda() {
   return (
-    <div>Haqqinda</div>
+    <div>Haqqinda </div>
   )
 }
 
