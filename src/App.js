@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import { Routes, Route, NavLink } from 'react-router-dom';
+import Haqqinda from './Haqqinda';
+import Isler from './Isler';
+import Elaqe from './Elaqe';
+import Main from './Main';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='menu'>
+      <NavLink to="/">
+          Esas Sehife
+      </NavLink>
+      <NavLink to="/Haqqında">
+          Haqqinda
+      </NavLink>
+      <NavLink to="/İş nümunələri">
+      Isler
+      </NavLink>
+      <NavLink to="/Əlaqə məlumatları">
+          Elaqe
+      </NavLink>
+      </div>
+    <Routes>
+      <Route path="/" element={<Main />}></Route>
+      <Route path="/Haqqında" element={<Haqqinda />}></Route>
+      <Route path="/İş nümunələri" element={<Isler />}></Route>
+      <Route path="/Əlaqə məlumatları" element={<Elaqe />}></Route>
+    </Routes>
     </div>
   );
 }
